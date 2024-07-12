@@ -22,7 +22,7 @@ import java.util.concurrent.TimeUnit;
 @RestController
 @RequestMapping("/user")
 @Validated
-public class UserController {
+public class    UserController {
 
     @Autowired
     private UserService userService;
