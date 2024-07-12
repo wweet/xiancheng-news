@@ -1,7 +1,6 @@
 package com.wc.controller;
 
 import com.wc.pojo.Article;
-import com.wc.pojo.Category;
 import com.wc.pojo.PageBean;
 import com.wc.pojo.Result;
 import com.wc.service.ArticleService;
