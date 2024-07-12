@@ -23,4 +23,6 @@ public interface ArticleMapper {
 
     @Update("update article set content=#{content},cover_img=#{coverImg},state=#{state} where id=#{id}")
     void update(Article article);
+
+    List<Article> listAll(Integer userId, Integer categoryId, String state);
 }

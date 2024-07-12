@@ -21,7 +21,7 @@ public class ArticleController {
         return Result.success();
     }
 
-    @GetMapping
+    @GetMapping("/list")
     public Result<PageBean<Article>> list(
             Integer pageNum,
             Integer pageSize,
@@ -29,6 +29,17 @@ public class ArticleController {
             @RequestParam(required = false) String state
     ) {
         PageBean<Article> pb =  articleService.list(pageNum,pageSize,categoryId,state);
+        return Result.success(pb);
+    }
+
+    @GetMapping("/listAll")
+    public Result<PageBean<Article>> listAll(
+            Integer pageNum,
+            Integer pageSize,
+            @RequestParam(required = false) Integer categoryId,
+            @RequestParam(required = false) String state
+    ) {
+        PageBean<Article> pb =  articleService.listAll(pageNum,pageSize,categoryId,state);
         return Result.success(pb);
     }
 

@@ -18,4 +18,17 @@
             and create_user=#{userId}
         </where>
     </select>
+    <!--动态sql-->
+    <select id="listAll" resultType="com.wc.pojo.Article">
+        select * from article
+        <where>
+            <if test="categoryId!=null">
+                category_id=#{categoryId}
+            </if>
+
+            <if test="state!=null">
+                and state=#{state}
+            </if>
+        </where>
+    </select>
 </mapper>
