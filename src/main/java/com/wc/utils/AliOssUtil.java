@@ -10,12 +10,12 @@ import com.aliyun.oss.model.PutObjectResult;
 import java.io.InputStream;
 
 public class AliOssUtil {
-    private static final String ENDPOINT = "https://oss-cn-beijing.aliyuncs.com";
+    private static final String ENDPOINT = "null";
     private static final String ACCESS_KEY_ID = "null";
     private static final String ACCESS_KEY_SECRET = "null";
-    private static final String BUCKET_NAME = "big-event-wcdy";
+    private static final String BUCKET_NAME = "null";
 
-    public static String uploadFile(String objectName, InputStream in) throws Exception {
+    public static String uploadFile(String objectName, InputStream in) {
 
         // 创建OSSClient实例。
         OSS ossClient = new OSSClientBuilder().build(ENDPOINT, ACCESS_KEY_ID, ACCESS_KEY_SECRET);
